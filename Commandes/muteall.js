@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const {PREFIX} = require("../config.js");
 
 module.exports.run = (client, message, args) => {
-message.member.voice.channel.join()
     const EmBeD = new Discord.MessageEmbed()
     .setAuthor('Permission de mute nécessaire ', 'https://cdn.discordapp.com/emojis/793046366254268427.png?v=1')
     .setColor('#7bfbff')
