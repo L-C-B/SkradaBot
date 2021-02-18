@@ -15,4 +15,8 @@
   },
   "author": "L-C-B",
   "license": "ISC"
-}
+},
+"engines": {
+    "node": ">=0.10.22",
+    "npm": ">=1.3.14"
+  }
