@@ -2,11 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const {TOKEN, PREFIX} = require("./config.js");
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
 client.login(TOKEN);
 client.on("ready", async () => {  
   console.log('%c\n・Index.js en chargement...', 'color: #8BFF88')
