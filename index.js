@@ -4,7 +4,7 @@ const fs = require('fs');
 const {TOKEN, PREFIX} = require("./config.js");
 const PORT = process.env.PORT || 3000;
 
-client.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 client.login(TOKEN);
