@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args, log) => {
     return message.channel.send(pong).then(msg => {
         setTimeout(() => {
             msg.delete()
-        }, 6000);
+        }, 3000);
     });
 }
   
