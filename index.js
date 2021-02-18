@@ -9,6 +9,10 @@ client.on("ready", async () => {
   console.log('%c・Commandes en chargements...', 'color: #8BFF88')
   console.log('%c・Statut en chargement... \n', 'color: #8BFF88')
 });
+  client.user.setActivity("Among Us", {
+    type: "PLAYING",
+  });
+
 client.commands = new Discord.Collection();
 fs.readdir("./Commandes/", (error, f) => {
   if(error) console.log(error);
