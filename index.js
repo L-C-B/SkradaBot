@@ -8,10 +8,6 @@ client.on("ready", async () => {
   console.log('%c\n・Index.js en chargement...', 'color: #8BFF88')
   console.log('%c・Commandes en chargements...', 'color: #8BFF88')
   console.log('%c・Statut en chargement... \n', 'color: #8BFF88')
-  client.on("ready", () => {
-  client.user.setActivity("Among Us", {
-    type: "PLAYING",
-  });
   });
 
 client.commands = new Discord.Collection();
