@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args, log) => {
 
 
 
-    if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("`Vous n\'avez pas la permission d\'utiliser cette commande.`");
+    if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("`Vous n\'avez pas la permission d\'utiliser cette commande.`");
     if (!args[0]) return message.reply("`Vous devez mettre un nombre de messages à supprimer`");
     if (parseInt(args[0]) <= 0 || parseInt(args[0]) >= 100) return message.reply("`Vous devez indiquer un nombre entre 1 et 100 !.`")
     message.channel.bulkDelete(parseInt(args[0]) + 1)
