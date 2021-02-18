@@ -7,7 +7,7 @@ module.exports.run = (client, message, args) => {
     .setAuthor('Permission de unmute nécessaire ', 'https://cdn.discordapp.com/emojis/793046366254268427.png?v=1')
     .setColor('#7bfbff')
     if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(EmBeD)
-    const channel = message.channel
+    const channel = message.member.voice.channel
     const members = channel.members
     members.forEach(member => {
         member.voice.setMute(false)
