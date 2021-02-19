@@ -6,6 +6,10 @@ module.exports.run = (client, message, args) => {
     .setAuthor('Permission de mute nécessaire ', 'https://cdn.discordapp.com/emojis/793046366254268427.png?v=1')
     .setColor('#7bfbff')
     if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(EmBeD)
+    const EMmBeD = new Discord.MessageEmbed()
+    .setAuthor('Veuillez rejoindre un salon vocal ', 'https://cdn.discordapp.com/emojis/793046366254268427.png?v=1')
+    .setColor('#7bfbff')
+    if (!message.member.voice.channel) return message.reply(EMmBeD);
     const channel = message.member.voice.channel
     const members = channel.members
         members.forEach(member => {
