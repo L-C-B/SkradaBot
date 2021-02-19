@@ -4,11 +4,16 @@ const fs = require('fs');
 const {TOKEN, PREFIX} = require("./config.js");
 
 client.login(TOKEN);
-client.on("ready", async () => {  
+client.on("ready", () => {
   console.log('%c\n・Index.js en chargement...', 'color: #8BFF88')
   console.log('%c・Commandes en chargements...', 'color: #8BFF88')
   console.log('%c・Statut en chargement... \n', 'color: #8BFF88')
+  console.log(`%c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n✔️・${client.user.username} est Online ! \n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n`,'color: ##FFAD00')
+  client.user.setActivity("Among Us", {
+    type: "PLAYING",
   });
+
+});
 
 client.commands = new Discord.Collection();
 fs.readdir("./Commandes/", (error, f) => {
@@ -36,10 +41,6 @@ fs.readdir("./Events/", (error, f) => {
     client.on(event, events.bind(null, client));
 
   });
-
-});
-client.on("ready", async () => {  
-  console.log("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n・Le BOT est ALLUMÉ !\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬")
 
 });
 });
