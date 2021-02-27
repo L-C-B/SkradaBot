@@ -11,7 +11,7 @@ module.exports.run = (client, message, args) => {
 message.delete();
       let embed = new Discord.MessageEmbed()
       .setTitle(":books:  | SONDAGE : ")
-      .setColor('#7bfbff')
+      .setColor('#000000')
       .setDescription(':interrobang:**・' +args.join(" ") + '**' + '\n \n'+ '\n・`🟩 - Oui (Pour)`\n・`🟨 - Neutre (Je ne sais pas)`\n・`🟥 - Non (Contre)`')
       .setThumbnail('https://cdn.discordapp.com/avatars/805474066399363113/27157664ebae802b85cb0edf35ca876f.webp')
       .setFooter('・Sondage de ' + message.author.username, message.author.avatarURL())
