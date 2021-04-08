@@ -9,14 +9,7 @@ module.exports.run = (client, message, args) => {
     message.delete();
     var text = message.content.split(' ').slice(1).join(' ');
     message.channel.send(text)
-
-
-
-        
-    
-
 }
-
 module.exports.help = {
     name: 'say',
   };
